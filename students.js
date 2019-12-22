@@ -36,3 +36,5 @@ const nameOfSenStudents = students.filter(oldStudents => oldStudents.grade >= 6)
 .map(names => names.name);
 
 console.log(nameOfSenStudents.join(", "));
+
+// calculate the average age of the students with reduce method
