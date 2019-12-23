@@ -23,18 +23,37 @@ students = [
 const fishingHobby = students.filter(fishing => fishing.hobby == "fishing")
 .map(fisherman => fisherman.name);
 
+console.log("The name of this person is: " + fishingHobby.toString());
 
-console.log(fishingHobby);
 
 // show how many people are in grade 6 and above
 const numOfSenStudents = students.filter(oldStudents => oldStudents.grade >= 6).length;
-// .reduce((acc, total) => acc + total.id, 0);
-console.log(numOfSenStudents);
+
+console.log("The number of students above grade 5 is: " + numOfSenStudents);
+
 
 // show the name of these students and separate the names by space (", ")
 const nameOfSenStudents = students.filter(oldStudents => oldStudents.grade >= 6)
 .map(names => names.name);
 
-console.log(nameOfSenStudents.join(", "));
+console.log("The name of these students: " + nameOfSenStudents.join(", "));
+
 
 // calculate the average age of the students with reduce method
+const avgAge = (students.reduce((acc, curr) => acc + curr.age, 0) / students.length).toFixed(2);
+
+console.log(avgAge);
+
+
+// reverse the name of the hobbies of each student
+
+
+// add a new student to the array - permanently & also display the array elements with the new array
+
+
+// remove the previous student from the array & also display the array elements with the new array
+
+
+// create a copy of the students array and add a new student to it
+
+
