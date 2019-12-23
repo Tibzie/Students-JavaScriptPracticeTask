@@ -10,7 +10,7 @@ students = [
   { id: 9, name: "Steve", gender: "male", grade: 7, hobby: "skateboarding", age: 15}
 ];
 
-/* Find the person with the "fishing" hobby and display the name of this person */
+/* find the person with the "fishing" hobby and display the name of this person */
 
 // ES5
 /* const fishingHobby = students.filter((fishing) => {
