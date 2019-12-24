@@ -45,7 +45,10 @@ const avgAge = (students.reduce((acc, curr) => acc + curr.age, 0) / students.len
 console.log(avgAge);
 
 
-// reverse the name of the hobbies of each student
+// reverse the name of the hobbies of each student and return these as a string
+const revHobbies = students.map(reverseH => reverseH.hobby.split(" ").reverse().join(""));
+
+console.log(`Reversed hobbies: ${revHobbies.toString()}`);
 
 
 // add a new student to the array - permanently & also display the array elements with the new array
