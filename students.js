@@ -51,7 +51,11 @@ const revHobbies = students.map(reverseH => reverseH.hobby.split(" ").reverse().
 console.log(`Reversed hobbies: ${revHobbies.toString()}`);
 
 
-// add a new student to the array - permanently & also display the array elements with the new array
+// add a new student to the array - also display the last element of the array
+students.push({ id: 10, name: "Thomson", gender: "male", grade: 8, hobby: "rocket science", age: 16});
+
+console.log(students.slice(-1)[0]);
+
 
 
 // remove the previous student from the array & also display the array elements with the new array
