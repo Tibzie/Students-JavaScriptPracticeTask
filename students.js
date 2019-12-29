@@ -58,7 +58,10 @@ console.log(students.slice(-1)[0]);
 
 
 
-// remove the previous student from the array & also display the array elements with the new array
+// remove the previous student from the array & also display the last element of the array
+
+students.pop();
+console.log(students.slice(-1)[0]);
 
 
 // create a copy of the students array and add a new student to it
