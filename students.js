@@ -64,6 +64,12 @@ students.pop();
 console.log(students.slice(-1)[0]);
 
 
-// create a copy of the students array and add a new student to it
+// create an immutable copy of the students array and add a new student to it
+
+const newStudents = [...students];
+newStudents.push({ id: 10, name: "Emily", gender: "female", grade: 5, hobby: "snowboarding", age: 13})
+
+console.log(newStudents);
+console.log(students);
 
 
