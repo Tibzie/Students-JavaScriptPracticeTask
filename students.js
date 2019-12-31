@@ -59,13 +59,11 @@ console.log(students.slice(-1)[0]);
 
 
 // remove the previous student from the array & also display the last element of the array
-
 students.pop();
 console.log(students.slice(-1)[0]);
 
 
 // create an immutable copy of the students array and add a new student to it
-
 const newStudents = [...students];
 newStudents.push({ id: 10, name: "Emily", gender: "female", grade: 5, hobby: "snowboarding", age: 13})
 
@@ -74,7 +72,6 @@ console.log(students);
 
 
 // sort by age and display both age and name of the students
-
 const sortAge = students.filter(ageSorting => ageSorting.age).map(sorted => {
 return `These are the names in age order (ascending): `,
 `Age: ${sorted.age}, Name: ${sorted.name}`});
