@@ -73,3 +73,10 @@ console.log(newStudents);
 console.log(students);
 
 
+// sort by age and display both age and name of the students
+
+const sortAge = students.filter(ageSorting => ageSorting.age).map(sorted => {
+return `These are the names in age order (ascending): `,
+`Age: ${sorted.age}, Name: ${sorted.name}`});
+
+console.log(sortAge.sort());
