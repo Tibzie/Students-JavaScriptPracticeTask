@@ -93,3 +93,10 @@ const checkSteve = (target) => students.filter(checkN => checkN.name == target)
 
 console.log(checkSteve("Steve"));
 
+
+// check if the array includes someone called Steven
+const checkName = students.map(thename => thename.name).includes("Steven");
+
+console.log(checkName);
+
+
