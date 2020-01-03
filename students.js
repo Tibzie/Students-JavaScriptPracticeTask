@@ -77,3 +77,13 @@ return `These are the names in age order (ascending): `,
 `Age: ${sorted.age}, Name: ${sorted.name}`});
 
 console.log(sortAge.sort());
+
+
+// check if there is a student called Katie as part of the array and display her id and hobby if there is one (with ternary operator)
+const checkKatie = students.map(checkValue => {
+  return  checkValue.name === "Katie" ? `Id: ${checkValue.id} + Hobby: ${checkValue.hobby}` : "this is not Katie";
+})
+
+console.log(checkKatie);
+
+
