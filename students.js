@@ -87,3 +87,9 @@ const checkKatie = students.map(checkValue => {
 console.log(checkKatie);
 
 
+// check whether Steve is part of the club and show his hobby
+const checkSteve = (target) => students.filter(checkN => checkN.name == target)
+.map(checkV => checkV.id + checkV.hobby);
+
+console.log(checkSteve("Steve"));
+
