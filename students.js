@@ -10,7 +10,7 @@ students = [
   { id: 9, name: "Steve", gender: "male", grade: 7, hobby: "skateboarding", age: 15}
 ];
 
-/* find the person with the "fishing" hobby and display the name of this person */
+/* 1. find the person with the "fishing" hobby and display the name of this person */
 
 // ES5
 /* const fishingHobby = students.filter((fishing) => {
@@ -26,44 +26,44 @@ const fishingHobby = students.filter(fishing => fishing.hobby == "fishing")
 console.log("The name of this person is: " + fishingHobby.toString());
 
 
-// show how many people are in grade 6 and above
+// 2. show how many people are in grade 6 and above
 const numOfSenStudents = students.filter(oldStudents => oldStudents.grade >= 6).length;
 
 console.log("The number of students above grade 5 is: " + numOfSenStudents);
 
 
-// show the name of these students and separate the names by space (", ")
+// 3. show the name of these students and separate the names by space (", ")
 const nameOfSenStudents = students.filter(oldStudents => oldStudents.grade >= 6)
 .map(names => names.name);
 
 console.log("The name of these students: " + nameOfSenStudents.join(", "));
 
 
-// calculate the average age of the students with reduce method
+// 4. calculate the average age of the students with reduce method
 const avgAge = (students.reduce((acc, curr) => acc + curr.age, 0) / students.length).toFixed(2);
 
 console.log(avgAge);
 
 
-// reverse the name of the hobbies of each student and return these as a string
+// 5. reverse the name of the hobbies of each student and return these as a string
 const revHobbies = students.map(reverseH => reverseH.hobby.split(" ").reverse().join(""));
 
 console.log(`Reversed hobbies: ${revHobbies.toString()}`);
 
 
-// add a new student to the array - also display the last element of the array
+// 6. add a new student to the array - also display the last element of the array
 students.push({ id: 10, name: "Thomson", gender: "male", grade: 8, hobby: "rocket science", age: 16});
 
 console.log(students.slice(-1)[0]);
 
 
 
-// remove the previous student from the array & also display the last element of the array
+// 7. remove the previous student from the array & also display the last element of the array
 students.pop();
 console.log(students.slice(-1)[0]);
 
 
-// create an immutable copy of the students array and add a new student to it
+// 8. create an immutable copy of the students array and add a new student to it
 const newStudents = [...students];
 newStudents.push({ id: 10, name: "Emily", gender: "female", grade: 5, hobby: "snowboarding", age: 13})
 
@@ -71,7 +71,7 @@ console.log(newStudents);
 console.log(students);
 
 
-// sort by age and display both age and name of the students
+// 9. sort by age and display both age and name of the students
 const sortAge = students.filter(ageSorting => ageSorting.age).map(sorted => {
 return `These are the names in age order (ascending): `,
 `Age: ${sorted.age}, Name: ${sorted.name}`});
@@ -79,7 +79,7 @@ return `These are the names in age order (ascending): `,
 console.log(sortAge.sort());
 
 
-// check if there is a student called Katie as part of the array and display her id and hobby if there is one (with ternary operator)
+// 10. check if there is a student called Katie as part of the array and display her id and hobby if there is one (with ternary operator)
 const checkKatie = students.map(checkValue => {
   return  checkValue.name === "Katie" ? `Id: ${checkValue.id} + Hobby: ${checkValue.hobby}` : "this is not Katie";
 })
@@ -87,35 +87,23 @@ const checkKatie = students.map(checkValue => {
 console.log(checkKatie);
 
 
-// check whether Steve is part of the club and show his hobby
+// 11. check whether Steve is part of the club and show his hobby
 const checkSteve = (target) => students.filter(checkN => checkN.name == target)
 .map(checkV => checkV.id + checkV.hobby);
 
 console.log(checkSteve("Steve"));
 
 
-// check if the array includes someone called Steven
+// 12. check if the array includes someone called Steven
 const checkName = students.map(thename => thename.name).includes("Steven");
 
 console.log(checkName);
 
 
-// if the array includes the name reply with an appropriate message
+// 13. if the array includes the name reply with an appropriate message
 const checkN = (value) => {
   const checkV = students.map(thename => thename.name).includes(value);
   return checkV === true ? "This name exists in the array" : "This name is NOT in the array";
 }
 
 console.log(checkN("Steve"));
-
-// // function myFunction(namee, valuee) {
-
-// //   if(namee === valuee) {
-// //     return students.filter((checkValue) => checkValue.name.includes(valuee))
-// //     .map(thehobby => thehobby.hobby);
-// //   } else {
-// //     return "The name is not part of the array"
-// //   }
-// // } 
-
-// // console.log(myFunction("Katies", "Katies"));
