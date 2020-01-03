@@ -16,3 +16,4 @@ Practising JavaScript to refresh knowledge.
 10. Check if there is a student called Katie as part of the array and display her id and hobby if there is one (with ternary operator)
 11. Check whether Steve is part of the club and show his hobby
 12. Check if the array includes someone called Steven
+13. If the array includes the name reply with an appropriate message
