@@ -13,3 +13,4 @@ Practising JavaScript to refresh knowledge.
 7. Remove the previous student from the array & also display the last element of the array
 8. Create an immutable copy of the students array and add a new student to it
 9. Sort by age and display both age and name of the students
+10. Check if there is a student called Katie as part of the array and display her id and hobby if there is one (with ternary operator)
