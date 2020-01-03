@@ -100,3 +100,22 @@ const checkName = students.map(thename => thename.name).includes("Steven");
 console.log(checkName);
 
 
+// if the array includes the name reply with an appropriate message
+const checkN = (value) => {
+  const checkV = students.map(thename => thename.name).includes(value);
+  return checkV === true ? "This name exists in the array" : "This name is NOT in the array";
+}
+
+console.log(checkN("Steve"));
+
+// // function myFunction(namee, valuee) {
+
+// //   if(namee === valuee) {
+// //     return students.filter((checkValue) => checkValue.name.includes(valuee))
+// //     .map(thehobby => thehobby.hobby);
+// //   } else {
+// //     return "The name is not part of the array"
+// //   }
+// // } 
+
+// // console.log(myFunction("Katies", "Katies"));
